@@ -76,7 +76,6 @@ This function should only modify configuration layer settings."
                      spell-checking-enable-by-default nil)
      twitter
      xkcd
-     selectric
      spotify
      games
      syntax-checking
