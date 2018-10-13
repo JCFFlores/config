@@ -512,8 +512,7 @@ before packages are loaded."
 
   (global-linum-mode t)
 
-  (eval-after-load "company"
-    '(add-to-list 'company-backends 'company-anaconda))
+  
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
