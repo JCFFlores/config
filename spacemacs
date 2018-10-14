@@ -78,7 +78,6 @@ This function should only modify configuration layer settings."
      twitter
      xkcd
      spotify
-     games
      syntax-checking
      )
 
