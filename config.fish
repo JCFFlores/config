@@ -55,7 +55,11 @@ function cowfortune
 end
 
 # pyenv configuration
-pyenv init - | source 
+if command -s pyenv > /dev/null 2>&1
+    pyenv init - | source 
+end
 
 # make fuck callable
-thefuck --alias | source
+if command -s thefuck > /dev/null 2>&1
+    thefuck --alias | source
+end
