@@ -17,10 +17,6 @@ function cd
     ls
 end
 
-function home
-    cd ~
-end
-
 function ..
     cd ../
 end
