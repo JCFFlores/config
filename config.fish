@@ -17,10 +17,6 @@ function cd
     ls
 end
 
-function ..
-    cd ../
-end
-
 function top
     htop
 end
