@@ -8,6 +8,8 @@ set -x MANPATH /usr/share/fish/man /usr/local/man /usr/local/share/man /usr/shar
 
 set -x PIPENV_SHELL_FANCY 1
 
+set -x GPG_TTY (tty)
+
 # pyenv config
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin $PATH
