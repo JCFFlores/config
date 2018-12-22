@@ -494,6 +494,9 @@ before packages are loaded."
   ;; use visual line minor mode while in org mode
   (add-hook 'org-mode-hook 'visual-line-mode)
 
+  ;; add org-habit to org-modules
+  (add-to-list 'org-modules 'org-habit t)
+  
   ;; set location for agenda files
   (setq org-agenda-files '("~/Dropbox/agenda/"))
 
