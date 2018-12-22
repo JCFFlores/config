@@ -11,8 +11,10 @@ set -x PIPENV_SHELL_FANCY 1
 set -x GPG_TTY (tty)
 
 # pyenv config
-set -x PYENV_ROOT $HOME/.pyenv
-set -x PATH $PYENV_ROOT/bin $PATH
+if test -d $HOME/.pyenv
+    set -x PYENV_ROOT $HOME/.pyenv
+    set -x PATH $PYENV_ROOT/bin $PATH
+end
 
 function cd
     builtin cd $argv
