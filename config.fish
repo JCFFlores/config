@@ -19,6 +19,11 @@ function cd
     ls
 end
 
+function mv
+    command mv -v $argv
+end
+
+
 function top
     htop
 end
