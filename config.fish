@@ -46,11 +46,6 @@ function nh
     nohup $argv > /dev/null 2>&1 &
 end
 
-# Run google-chrome with netflix open
-function netflix
-    nh google-chrome --app=http://netflix.com 
-end
-
 function cowfortune
     fortune | cowsay | lolcat
 end
