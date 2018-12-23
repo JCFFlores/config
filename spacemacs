@@ -514,8 +514,6 @@ before packages are loaded."
 
   ;; org agenda does not start on a fixed day
   (setq org-agenda-start-on-weekday nil)
-  ;; org agenda starts yesterday
-  ;; (setq org-agenda-start-day "-1d")
 
   (add-hook 'term-mode-hook 'spacemacs/toggle-truncate-lines-on)
 
