@@ -29,6 +29,10 @@ function cp
     command cp -v $argv
 end
 
+function rm
+    command rm -v $argv
+end
+
 function top
     htop
 end
