@@ -25,6 +25,9 @@ function mv
     command mv -v $argv
 end
 
+function cp
+    command cp -v $argv
+end
 
 function top
     htop
