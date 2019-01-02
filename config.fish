@@ -16,6 +16,10 @@ if test -d $HOME/.pyenv
     set -x PATH $PYENV_ROOT/bin $PATH
 end
 
+if test -e $HOME/.variables
+    source $HOME/.variables
+end
+
 function cd
     builtin cd $argv
     ls
