@@ -494,6 +494,15 @@ before packages are loaded."
   ;; org configuration
   (with-eval-after-load 'org
 
+    ;; configure org-crypt
+    (require 'org-crypt)
+    (org-crypt-use-before-save-magic)
+    (setq org-tags-exclude-from-inheritance (quote ("crypt")))
+    (setq org-crypt-key "josecruzflores.fl@gmail.com")
+    (setq auto-save-default nil)
+
+    ;; add support for org-crypt in org-journal
+    (setq org-journal-enable-encryption t)
   ;; add org-habit to org-modules
   (add-to-list 'org-modules 'org-habit t))
   ;; use visual line minor mode while in org mode
