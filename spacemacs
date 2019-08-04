@@ -62,6 +62,7 @@ This function should only modify configuration layer settings."
      emacs-lisp
      git
      haskell
+     erlang
      (treemacs :variables
                treemacs-use-filewatch-mode t
                treemacs-use-follow-mode t)
