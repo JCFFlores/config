@@ -26,11 +26,11 @@ function cd
 end
 
 function mv
-    command mv -v $argv
+    command mv -v -i $argv
 end
 
 function cp
-    command cp -v $argv
+    command cp -v -i $argv
 end
 
 function rm
