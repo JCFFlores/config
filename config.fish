@@ -41,6 +41,11 @@ function top
     htop
 end
 
+function unzipall
+    ls | grep zip | xargs --delimiter=\n -n 1 unzip -d $argv
+end
+
+
 # Emacs ansi-term support
 if test -n "$EMACS"
     set -x TERM eterm-color
