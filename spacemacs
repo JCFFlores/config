@@ -41,8 +41,6 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
      shell-scripts
      helm
-     ;; markdown
-     ;; html
      csv
      pdf
      racket
@@ -51,8 +49,6 @@ This function should only modify configuration layer settings."
      (c-c++ :variables
             c-c++-enable-clang-support t
             c-c++-enable-clang-format-on-save t)
-     octave
-     ess
      (python :variables
              python-test-runner 'pytest)
      (auto-completion :variables
@@ -70,9 +66,6 @@ This function should only modify configuration layer settings."
      (org :variables
           org-enable-org-journal-support t
           org-journal-dir "~/Dropbox/journal/")
-     ;; (latex :variables
-     ;;        latex-enable-folding t
-     ;;        latex-enable-auto-fill t)
      (shell :variables
              shell-default-height 30
              shell-default-position 'bottom
@@ -498,9 +491,9 @@ before packages are loaded."
     ;; configure org-crypt
     (require 'org-crypt)
     (org-crypt-use-before-save-magic)
-    (setq org-tags-exclude-from-inheritance (quote ("crypt")))
-    (setq org-crypt-key "josecruzflores.fl@gmail.com")
-    (setq auto-save-default nil)
+    (setq org-tags-exclude-from-inheritance (quote ("crypt"))
+          org-crypt-key "josecruzflores.fl@gmail.com"
+          auto-save-default nil)
 
     ;; add support for org-crypt in org-journal
     (setq org-journal-enable-encryption t)
@@ -533,7 +526,6 @@ before packages are loaded."
   (require 'keyfreq)
   (keyfreq-mode 1)
   (keyfreq-autosave-mode 1)
-  
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
