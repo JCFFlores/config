@@ -59,6 +59,8 @@ This function should only modify configuration layer settings."
      (org :variables
           org-enable-org-journal-support t
           org-journal-dir "~/Dropbox/journal/")
+     (latex :variables
+            latex-enable-folding t)
      (shell :variables
              shell-default-height 30
              shell-default-position 'bottom
