@@ -36,11 +36,9 @@ This function should only modify configuration layer settings."
    '(
      shell-scripts
      helm
-     csv
      pdf
      racket
      semantic
-     rust
      (c-c++ :variables
             c-c++-enable-clang-support t
             c-c++-enable-clang-format-on-save t)
@@ -69,11 +67,9 @@ This function should only modify configuration layer settings."
      (spell-checking :variables
                      spell-checking-enable-auto-dictionary t
                      spell-checking-enable-by-default nil)
-     twitter
      xkcd
      spotify
      syntax-checking
-     selectric
      )
 
    ;; List of additional packages that will be installed without being
