@@ -56,7 +56,6 @@ This function should only modify configuration layer settings."
      (treemacs :variables
                treemacs-use-filewatch-mode t
                treemacs-use-follow-mode t)
-     javascript ;; required by xkcd
      (org :variables
           org-enable-org-journal-support t
           org-journal-dir "~/Dropbox/journal/")
@@ -70,7 +69,6 @@ This function should only modify configuration layer settings."
      (spell-checking :variables
                      spell-checking-enable-auto-dictionary t
                      spell-checking-enable-by-default nil)
-     xkcd
      spotify
      syntax-checking
      search-engine
