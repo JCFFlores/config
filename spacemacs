@@ -73,6 +73,7 @@ This function should only modify configuration layer settings."
      xkcd
      spotify
      syntax-checking
+     search-engine
      )
 
    ;; List of additional packages that will be installed without being
