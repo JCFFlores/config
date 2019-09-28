@@ -39,9 +39,6 @@ This function should only modify configuration layer settings."
      pdf
      racket
      semantic
-     (c-c++ :variables
-            c-c++-enable-clang-support t
-            c-c++-enable-clang-format-on-save t)
      (python :variables
              python-test-runner 'pytest)
      (auto-completion :variables
