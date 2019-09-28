@@ -50,7 +50,8 @@ This function should only modify configuration layer settings."
      better-defaults
      emacs-lisp
      git
-     haskell
+     (haskell :variables
+              haskell-enable-hindent t)
      erlang
      (treemacs :variables
                treemacs-use-filewatch-mode t
