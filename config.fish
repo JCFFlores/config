@@ -46,6 +46,13 @@ function unzipall
 end
 
 
+function unrarall
+    for d in (ls | grep rar)
+        unrar x $d $argv
+    end
+end
+
+
 # Emacs ansi-term support
 if test -n "$EMACS"
     set -x TERM eterm-color
