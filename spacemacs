@@ -41,6 +41,7 @@ This function should only modify configuration layer settings."
      semantic
      (python :variables
              python-test-runner 'pytest)
+     octave
      (auto-completion :variables
                       auto-completion-enable-snippets-in-popup t
                       auto-completion-enable-help-tooltip t)
