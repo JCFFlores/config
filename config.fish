@@ -20,6 +20,12 @@ if test -e $HOME/.variables
     source $HOME/.variables
 end
 
+# poetry config
+if test -d $HOME/.poetry
+    set -x PATH $HOME/.poetry/bin $PATH
+end
+
+
 function cd
     builtin cd $argv
     ls
