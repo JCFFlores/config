@@ -50,7 +50,6 @@ This function should only modify configuration layer settings."
      git
      (haskell :variables
               haskell-enable-hindent t)
-     erlang
      (treemacs :variables
                treemacs-use-filewatch-mode t
                treemacs-use-follow-mode t)
