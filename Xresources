@@ -1,0 +1,31 @@
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+! Disable scrollback buffer for the secondary screen
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 1
+
+URxvt.perl-ext: default,matcher,url-select,keyboard-select
+
+! matcher configuration
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+! url-select configuration
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
+
+! keyboard-select configuration
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+
+! transparent background
+! URxvt.background: [90]#000000
+
+URxvt.scrollBar: false
