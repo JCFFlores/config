@@ -326,7 +326,22 @@ globalkeys = gears.table.join(
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+      {description = "show the menubar", group = "launcher"}),
+    -- Screenshots
+    awful.key({ }, "Print", function () awful.spawn("scrot -e 'mv $f ~/Pictures/ 2>/dev/null'")
+                            end, {description="Take screenshot"}),
+
+    -- Volume Keys
+    awful.key({ }, "XF86AudioMute", function ()
+        awful.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")
+                                    end, {description="Mute audio", group="volume"}),
+    awful.key({ }, "XF86AudioLowerVolume", function ()
+        awful.spawn.with_shell("pactl set-sink-mute @DEFAULT_SINK@ 0; pactl set-sink-volume @DEFAULT_SINK@ -5%")
+                                           end, {description="Lower volume", group="volume"}),
+    awful.key({ }, "XF86AudioRaiseVolume", function ()
+        awful.spawn.with_shell("~/.config/awesome/raise_volume.sh")
+                                           end, {description="Raise volume", group="volume"})
+
 )
 
 clientkeys = gears.table.join(
