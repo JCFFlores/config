@@ -88,3 +88,8 @@ end
 if command -s thefuck > /dev/null 2>&1
     thefuck --alias | source
 end
+
+# Abbreviations
+abbr p "sudo pacman"
+abbr SS "sudo systemctl"
+abbr pi "ping google.com"
