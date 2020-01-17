@@ -1,3 +1,55 @@
+! special
+*.foreground:   #add4c7
+*.background:   #0a0f0e
+*.cursorColor:  #add4c7
+
+! black
+*.color0:       #121917
+*.color8:       #6e9d8e
+
+! red
+*.color1:       #1a221f
+*.color9:       #9db375
+
+! green
+*.color2:       #283430
+*.color10:      #b899da
+
+! yellow
+*.color3:       #3d4c47
+*.color11:      #7eb3ca
+
+! blue
+*.color4:       #566b64
+*.color12:      #618076
+
+! magenta
+*.color5:       #759087
+*.color13:      #61867a
+
+! cyan
+*.color6:       #98bbaf
+*.color14:      #b7a3cf
+
+! white
+*.color7:       #c1ecde
+*.color15:      #74a5ba
+
+URxvt*font: xft:Iosevka Nerd Font:size=10
+
+URxvt.letterSpace: 1
+URxvt.lineSpace: 0
+URxvt.geometry: 92x24
+URxvt.internalBorder: 24
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.depth: 24
+URxvt.iso14755: false
+
 ! do not scroll with output
 URxvt*scrollTtyOutput: false
 
@@ -11,7 +63,7 @@ URxvt*scrollTtyKeypress: true
 URxvt.secondaryScreen: 1
 URxvt.secondaryScroll: 1
 
-URxvt.perl-ext: default,matcher,url-select,keyboard-select
+URxvt.perl-ext: default,matcher,url-select,keyboard-select,tabbed
 
 ! matcher configuration
 URxvt.url-launcher: /usr/bin/xdg-open
@@ -24,8 +76,4 @@ URxvt.url-select.underline: true
 
 ! keyboard-select configuration
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
-
-! transparent background
-! URxvt.background: [90]#000000
-
-URxvt.scrollBar: false
+URxvt.keyboard-select.clipboard: true
