@@ -340,8 +340,12 @@ globalkeys = gears.table.join(
                                            end, {description="Lower volume", group="volume"}),
     awful.key({ }, "XF86AudioRaiseVolume", function ()
         awful.spawn.with_shell("~/.config/awesome/raise_volume.sh")
-                                           end, {description="Raise volume", group="volume"})
+                                           end, {description="Raise volume", group="volume"}),
 
+    -- Keyboard layouts
+    awful.key({ "Mod1" }, "space", function ()
+        mykeyboardlayout.next_layout()
+    end)
 )
 
 clientkeys = gears.table.join(
