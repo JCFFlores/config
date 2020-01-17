@@ -69,6 +69,7 @@ This function should only modify configuration layer settings."
                      spell-checking-enable-by-default nil)
      javascript ; Required to read json
      lua ; Used for awesome wm
+     lsp
      csv
      spotify
      syntax-checking
