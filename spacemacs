@@ -40,7 +40,8 @@ This function should only modify configuration layer settings."
      racket
      semantic
      (python :variables
-             python-test-runner 'pytest)
+             python-test-runner 'pytest
+             python-backend 'anaconda)
      octave
      (auto-completion :variables
                       auto-completion-enable-snippets-in-popup t
@@ -49,7 +50,8 @@ This function should only modify configuration layer settings."
      emacs-lisp
      git
      (haskell :variables
-              haskell-enable-hindent t)
+              haskell-enable-hindent t
+              haskell-completion-backend 'ghci)
      prolog
      (treemacs :variables
                treemacs-use-filewatch-mode t
