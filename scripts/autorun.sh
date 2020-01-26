@@ -10,3 +10,4 @@ run() {
 run cbatticon
 run dropbox
 run light-locker
+run picom
