@@ -9,3 +9,4 @@ run() {
 
 run cbatticon
 run dropbox
+run light-locker

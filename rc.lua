@@ -347,13 +347,16 @@ globalkeys = gears.table.join(
         mykeyboardlayout.next_layout()
     end),
 
-    -- Screen brightness
+    -- Screen
     awful.key({ }, "XF86MonBrightnessUp", function ()
         awful.spawn("xbacklight -inc 10")
                                           end, {description="Increase screen brightness", group="screen"}),
     awful.key( { }, "XF86MonBrightnessDown", function ()
         awful.spawn("xbacklight -dec 10")
-    end, {description="Reduce screen brightness", group="screen"})
+                                             end, {description="Reduce screen brightness", group="screen"}),
+    awful.key( { }, "XF86ScreenSaver", function ()
+        awful.spawn("light-locker-command -l")
+             end, {description="Lock screen", group="screen"})
 )
 
 clientkeys = gears.table.join(
