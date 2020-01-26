@@ -47,7 +47,7 @@ URxvt*scrollTtyKeypress: true
 URxvt.secondaryScreen: 1
 URxvt.secondaryScroll: 1
 
-URxvt.perl-ext: default,matcher,url-select,keyboard-select,tabbed
+URxvt.perl-ext: default,matcher,url-select,keyboard-select
 
 ! matcher configuration
 URxvt.url-launcher: /usr/bin/xdg-open
