@@ -1,39 +1,23 @@
-! special
-*.foreground:   #add4c7
-*.background:   #0a0f0e
-*.cursorColor:  #add4c7
+URxvt*background:   [97]#282a36
+*foreground:   #eff0eb
+*cursorColor:  #9aedfe
 
-! black
-*.color0:       #121917
-*.color8:       #6e9d8e
-
-! red
-*.color1:       #1a221f
-*.color9:       #9db375
-
-! green
-*.color2:       #283430
-*.color10:      #b899da
-
-! yellow
-*.color3:       #3d4c47
-*.color11:      #7eb3ca
-
-! blue
-*.color4:       #566b64
-*.color12:      #618076
-
-! magenta
-*.color5:       #759087
-*.color13:      #61867a
-
-! cyan
-*.color6:       #98bbaf
-*.color14:      #b7a3cf
-
-! white
-*.color7:       #c1ecde
-*.color15:      #74a5ba
+*color0:      #33303b
+*color8:      #4f4b58
+*color1:      #ff5c57
+*color9:      #ff5c57
+*color2:      #5af78e
+*color10:     #5af78e
+*color3:      #f3f99d
+*color11:     #f3f99d
+*color4:      #57c7ff
+*color12:     #57c7ff
+*color5:      #ff6ac1
+*color13:     #ff6ac1
+*color6:      #9aedfe
+*color14:     #9aedfe
+*color7:      #eff0eb
+*color15:     #eff0eb
 
 URxvt*font: xft:Iosevka Nerd Font:size=10
 
