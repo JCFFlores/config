@@ -37,7 +37,6 @@ This function should only modify configuration layer settings."
      shell-scripts
      helm
      pdf
-     racket
      semantic
      (python :variables
              python-test-runner 'pytest
@@ -52,7 +51,6 @@ This function should only modify configuration layer settings."
      (haskell :variables
               haskell-enable-hindent t
               haskell-completion-backend 'ghci)
-     prolog
      (treemacs :variables
                treemacs-use-filewatch-mode t
                treemacs-use-follow-mode t)
