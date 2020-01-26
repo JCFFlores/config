@@ -345,7 +345,15 @@ globalkeys = gears.table.join(
     -- Keyboard layouts
     awful.key({ "Mod1" }, "space", function ()
         mykeyboardlayout.next_layout()
-    end)
+    end),
+
+    -- Screen brightness
+    awful.key({ }, "XF86MonBrightnessUp", function ()
+        awful.spawn("xbacklight -inc 10")
+                                          end, {description="Increase screen brightness", group="screen"}),
+    awful.key( { }, "XF86MonBrightnessDown", function ()
+        awful.spawn("xbacklight -dec 10")
+    end, {description="Reduce screen brightness", group="screen"})
 )
 
 clientkeys = gears.table.join(
