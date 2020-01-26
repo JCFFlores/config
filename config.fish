@@ -10,6 +10,8 @@ set -x PIPENV_SHELL_FANCY 1
 
 set -x GPG_TTY (tty)
 
+set -g theme_nerd_fonts yes
+
 # pyenv config
 if test -d $HOME/.pyenv
     set -x PYENV_ROOT $HOME/.pyenv
