@@ -49,11 +49,6 @@ function top
     htop
 end
 
-function unzipall
-    ls | grep zip | xargs --delimiter=\n -n 1 unzip -d $argv
-end
-
-
 function unrarall
     for d in (ls | grep rar)
         unrar x $d $argv
