@@ -1,17 +1,7 @@
 import XMonad
-import XMonad.Config.Desktop
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.EZConfig
-
-defaultTerminal :: String
-defaultTerminal = "urxvtopen -e fish"
-
-defaultModMask :: KeyMask
-defaultModMask = mod4Mask
-
-defaultBorderWidth :: Dimension
-defaultBorderWidth = 3
 
 keyBindings :: [(String, X ())]
 keyBindings = [ ("<XF86AudioMute>", spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle")
@@ -23,10 +13,10 @@ keyBindings = [ ("<XF86AudioMute>", spawn "pactl set-sink-mute @DEFAULT_SINK@ to
               , ("<XF86ScreenSaver>", spawn "light-locker-command -l" )]
 
 main :: IO ()
-main = xmonad =<< xmobar (desktopConfig
+main = xmonad =<< xmobar (ewmh def
   {
-    terminal = defaultTerminal
-    , modMask = defaultModMask
-    , borderWidth = defaultBorderWidth
-    , handleEventHook = fullscreenEventHook
+    terminal = "urxvtopen -e fish"
+    , modMask = mod4Mask
+    , borderWidth = 3
+    , handleEventHook = handleEventHook def <+> fullscreenEventHook
   } `additionalKeysP` keyBindings)
