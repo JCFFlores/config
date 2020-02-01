@@ -65,7 +65,7 @@ end
 
 # pyenv configuration
 if command -s pyenv > /dev/null 2>&1
-    pyenv init - | source 
+    pyenv init - | source
 end
 
 # make fuck callable
@@ -77,3 +77,4 @@ end
 abbr p "sudo pacman"
 abbr SS "sudo systemctl"
 abbr pi "ping google.com"
+abbr y "yay -S"
