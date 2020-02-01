@@ -59,12 +59,6 @@ function fish_title
     true
 end
 
-# Runs the command on the background with no hangup
-# Redirects stdout and stderr to /dev/null
-function nh
-    nohup $argv > /dev/null 2>&1 &
-end
-
 function cowfortune
     fortune | cowsay | lolcat
 end
