@@ -13,12 +13,17 @@ keyBindings = [ ("<XF86AudioMute>", spawn "pactl set-sink-mute @DEFAULT_SINK@ to
               , ("<XF86MonBrightnessDown>", spawn "xbacklight -dec 10")
               , ("<XF86ScreenSaver>", spawn "light-locker-command -l" )]
 
-main :: IO ()
-main = xmonad =<< xmobar (ewmh def
+myConfig = ewmh def
   {
     terminal = "urxvtopen -e fish"
     , modMask = mod4Mask
     , borderWidth = 3
     , layoutHook = Tall 1 (3/100) (1/2) ||| noBorders Full
     , handleEventHook = handleEventHook def <+> fullscreenEventHook
-  } `additionalKeysP` keyBindings)
+  } `additionalKeysP` keyBindings
+
+toggleStatusBar :: XConfig l -> (KeyMask, KeySym)
+toggleStatusBar XConfig {modMask = modMask} = (modMask, xK_b)
+
+main :: IO ()
+main = xmonad =<< statusBar "xmobar" xmobarPP toggleStatusBar myConfig
