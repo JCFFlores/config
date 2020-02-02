@@ -18,7 +18,7 @@ myConfig = ewmh def
     terminal = "urxvtopen -e fish"
     , modMask = mod4Mask
     , borderWidth = 3
-    , layoutHook = Tall 1 (3/100) (1/2) ||| noBorders Full
+    , layoutHook = smartBorders $ Tall 1 (3/100) (1/2) ||| Full
     , handleEventHook = handleEventHook def <+> fullscreenEventHook
   } `additionalKeysP` keyBindings
 
