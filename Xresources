@@ -19,7 +19,7 @@ URxvt*foreground:   #eff0eb
 *color7:      #eff0eb
 *color15:     #eff0eb
 
-URxvt*font: xft:Iosevka Nerd Font:size=10
+URxvt*font: xft:Iosevka Nerd Font:size=10:antialias=true
 
 URxvt.letterSpace: 1
 URxvt.lineSpace: 0
