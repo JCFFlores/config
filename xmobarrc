@@ -5,15 +5,13 @@ Config
 , position = Top
 , borderColor = "A4A4A4"
 , font = "xft:Bitstream Vera Sans Mono:size=9:bold:antialias=true"
-, commands = -- what information to show
-  -- network activity monitor (dynamic interface resolution)
-  [ Run DynNetwork [] 10 -- network traffic
-  , Run Memory [] 10 -- RAM usage
+, commands =
+  [ Run Memory [] 10 -- RAM usage
   , Run Battery [] 10 -- battery time
   , Run Volume "default" "Master" [] 10
   , Run Date "%d %b %T" "mydate" 10
+  , Run Kbd [("latam", "ES"), ("us", "US")]
   , Run StdinReader -- text coming from xmonad
   ]
--- where to show command information
-, template = "%StdinReader% }{ %memory% | %default:Master% | %dynnetwork% | %battery% | %mydate% |"
+, template = "%StdinReader% }{ %memory% | %default:Master% | %battery% | %kbd% | %mydate% |"
 }
