@@ -3,6 +3,8 @@ import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.EZConfig
 import XMonad.Layout.NoBorders
+import XMonad.Layout.Grid
+import XMonad.Layout.TwoPane
 
 keyBindings :: [(String, X ())]
 keyBindings = [ ("<XF86AudioMute>", spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle")
@@ -18,7 +20,7 @@ myConfig = ewmh def
     terminal = "urxvtopen -e fish"
     , modMask = mod4Mask
     , borderWidth = 3
-    , layoutHook = smartBorders $ Tall 1 (3/100) (1/2) ||| Full
+    , layoutHook = smartBorders $ Tall 1 (3/100) (1/2) ||| Full ||| Grid ||| TwoPane (3/100) (1/2)
     , handleEventHook = handleEventHook def <+> fullscreenEventHook
   } `additionalKeysP` keyBindings
 
