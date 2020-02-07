@@ -6,7 +6,7 @@ Config
 , borderColor = "A4A4A4"
 , font = "xft:Bitstream Vera Sans Mono:size=9:bold:antialias=true"
 , commands =
-  [ Run Memory ["-t", "Mem: <usedratio>%"] 10
+  [ Run Memory ["-t", "Mem: <usedratio>%"] 100
   , Run Battery ["-t", "Batt: <left>% / <timeleft>"] 10
   , Run Volume "default" "Master" [] 10
   , Run Date "%d %b %T" "mydate" 10
