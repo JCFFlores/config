@@ -1,5 +1,7 @@
 URxvt*background:   [97]#282a36
 URxvt*foreground:   #eff0eb
+Sxiv*background: #282a36
+Sxiv*foreground: #ffffff
 *cursorColor:  #9aedfe
 
 *color0:      #33303b
