@@ -11,7 +11,8 @@ Config
   , Run Volume "default" "Master" [] 10
   , Run Date "%d %b %T" "mydate" 10
   , Run Kbd [("latam", "es")]
-  , Run StdinReader -- text coming from xmonad
+  , Run StdinReader
+  , Run Brightness ["-t", "Bright: <percent>%", "--", "-D", "intel_backlight"] 60
   ]
-, template = "%StdinReader% }{ %memory% | %default:Master% | %battery% | %kbd% | %mydate% |"
+, template = "%StdinReader% }{ %memory% | %default:Master% | %bright% | %battery% | %kbd% | %mydate% |"
 }
