@@ -1,3 +1,5 @@
+{-# OPTIONS -fno-warn-missing-signatures #-}
+
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
