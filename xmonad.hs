@@ -9,6 +9,7 @@ import XMonad.Layout.Grid
 import XMonad.Layout.TwoPane
 import XMonad.Layout.MultiToggle
 import XMonad.Layout.MultiToggle.Instances
+import XMonad.Hooks.ManageHelpers
 
 keyBindings :: [(String, X ())]
 keyBindings = [ ("<XF86AudioMute>", spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle")
@@ -26,6 +27,7 @@ myConfig = ewmh def
     , modMask = mod4Mask
     , borderWidth = 3
     , layoutHook = myLayout
+    , manageHook = myManageHook <+> manageHook def
     , handleEventHook = handleEventHook def <+> fullscreenEventHook
   } `additionalKeysP` keyBindings
 
@@ -35,6 +37,8 @@ toggleStatusBar XConfig {modMask = modMask} = (modMask, xK_b)
 myLayout =
   smartBorders . mkToggle1 FULL $
   Tall 1 (3 / 100) (1 / 2) ||| Grid ||| TwoPane (3 / 100) (1 / 2)
+
+myManageHook = isFullscreen --> doFullFloat
 
 main :: IO ()
 main = xmonad =<< statusBar "xmobar" xmobarPP toggleStatusBar myConfig
