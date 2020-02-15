@@ -27,7 +27,7 @@ myConfig = ewmh def
     , borderWidth = 3
     , layoutHook = myLayout
     , manageHook = myManageHook <+> manageHook def
-    , handleEventHook = handleEventHook def <+> fullscreenEventHook
+    , handleEventHook = fullscreenEventHook <+> handleEventHook def
   } `additionalKeysP` keyBindings
 
 toggleStatusBar :: XConfig l -> (KeyMask, KeySym)
