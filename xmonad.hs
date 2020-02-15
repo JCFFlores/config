@@ -11,7 +11,6 @@ import XMonad.Layout.MultiToggle
 import XMonad.Layout.MultiToggle.Instances
 import XMonad.Hooks.ManageHelpers
 
-keyBindings :: [(String, X ())]
 keyBindings = [ ("<XF86AudioMute>", spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle")
               , ("<XF86AudioLowerVolume>", spawn "pactl set-sink-mute @DEFAULT_SINK@ 0; pactl set-sink-volume @DEFAULT_SINK@ -5%")
               , ("<XF86AudioRaiseVolume>", spawn "raise_volume.sh")
@@ -40,5 +39,4 @@ myLayout =
 
 myManageHook = isFullscreen --> doFullFloat
 
-main :: IO ()
 main = xmonad =<< statusBar "xmobar" xmobarPP toggleStatusBar myConfig
