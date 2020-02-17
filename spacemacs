@@ -34,20 +34,24 @@ This function should only modify configuration layer settings."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     yaml
      shell-scripts
      helm
      pdf
      semantic
+     auto-completion
      (python :variables
              python-test-runner 'pytest
              python-backend 'anaconda)
      octave
+     ess
      (auto-completion :variables
                       auto-completion-enable-snippets-in-popup t
                       auto-completion-enable-help-tooltip t)
      better-defaults
      emacs-lisp
      git
+     github
      (haskell :variables
               haskell-enable-hindent t
               haskell-completion-backend 'ghci)
@@ -57,6 +61,7 @@ This function should only modify configuration layer settings."
      (org :variables
           org-enable-org-journal-support t
           org-journal-dir "~/Dropbox/journal/")
+     markdown
      (latex :variables
             latex-enable-folding t)
      (shell :variables
