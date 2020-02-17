@@ -68,6 +68,8 @@ This function should only modify configuration layer settings."
                      spell-checking-enable-auto-dictionary t
                      spell-checking-enable-by-default nil)
      javascript ; Required to read json
+     web-beautify
+     (html :variables web-fmt-tool 'web-beautify)
      lua ; Used for awesome wm
      lsp
      csv
