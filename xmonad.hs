@@ -11,9 +11,9 @@ import           XMonad.Layout.NoBorders
 import           XMonad.Layout.TwoPane
 import           XMonad.Util.EZConfig
 
-keyBindings = [ ("<XF86AudioMute>", spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle")
-              , ("<XF86AudioLowerVolume>", spawn "pactl set-sink-mute @DEFAULT_SINK@ 0; pactl set-sink-volume @DEFAULT_SINK@ -5%")
-              , ("<XF86AudioRaiseVolume>", spawn "raise_volume.sh")
+keyBindings = [ ("<XF86AudioMute>", spawn "amixer set Master toggle")
+              , ("<XF86AudioLowerVolume>", spawn "amixer set Master 5%-")
+              , ("<XF86AudioRaiseVolume>", spawn "amixer set Master unmute; amixer set Master 5%+")
               , ("<Print>", spawn "scrot -e 'mv $f ~/Pictures/ 2>/dev/null'")
               , ("<XF86MonBrightnessUp>", spawn "xbacklight -inc 10")
               , ("<XF86MonBrightnessDown>", spawn "xbacklight -dec 10")
