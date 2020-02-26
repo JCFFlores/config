@@ -1,4 +1,7 @@
 {-# OPTIONS -fno-warn-missing-signatures #-}
+{-# LANGUAGE DeriveDataTypeable    #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE TypeSynonymInstances  #-}
 
 import           XMonad
 import           XMonad.Hooks.DynamicLog
@@ -11,6 +14,11 @@ import           XMonad.Layout.NoBorders
 import           XMonad.Layout.TwoPane
 import           XMonad.Util.EZConfig
 
+data TWOPANE = TWOPANE deriving (Read, Show, Eq, Typeable)
+
+instance Transformer TWOPANE Window where
+  transform _ x k = k (TwoPane (3 / 100) (1/2)) (const x)
+
 keyBindings = [ ("<XF86AudioMute>", spawn "amixer set Master toggle")
               , ("<XF86AudioLowerVolume>", spawn "amixer set Master 5%-")
               , ("<XF86AudioRaiseVolume>", spawn "amixer set Master unmute; amixer set Master 5%+")
@@ -18,7 +26,8 @@ keyBindings = [ ("<XF86AudioMute>", spawn "amixer set Master toggle")
               , ("<XF86MonBrightnessUp>", spawn "xbacklight -inc 10")
               , ("<XF86MonBrightnessDown>", spawn "xbacklight -dec 10")
               , ("<XF86ScreenSaver>", spawn "light-locker-command -l" )
-              , ("M-f", sendMessage $ Toggle FULL)]
+              , ("M-f", sendMessage $ Toggle FULL)
+              , ("M-i", sendMessage $ Toggle TWOPANE)]
 
 myConfig = ewmh def
   {
@@ -34,8 +43,8 @@ toggleStatusBar :: XConfig l -> (KeyMask, KeySym)
 toggleStatusBar XConfig {modMask = modMask} = (modMask, xK_b)
 
 myLayout =
-  smartBorders . mkToggle1 FULL $
-  Tall 1 (3 / 100) (1 / 2) ||| Grid ||| TwoPane (3 / 100) (1 / 2)
+  smartBorders . mkToggle (FULL ?? TWOPANE ?? EOT) $
+  Tall 1 (3 / 100) (1 / 2) ||| Grid
 
 myManageHook = isFullscreen --> doFullFloat
 
