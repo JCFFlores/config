@@ -27,17 +27,23 @@ keyBindings = [ ("<XF86AudioMute>", spawn "amixer set Master toggle")
               , ("<XF86MonBrightnessDown>", spawn "xbacklight -dec 10")
               , ("<XF86ScreenSaver>", spawn "light-locker-command -l" )
               , ("M-f", sendMessage $ Toggle FULL)
-              , ("M-i", sendMessage $ Toggle TWOPANE)]
+              , ("M-i", sendMessage $ Toggle TWOPANE)
+              , ("M-n", sendMessage NextLayout)
+              , ("M-<Space>", spawn myTerminal)]
+
+removedKeyBindings = ["M-S-<Return>"]
+
+myTerminal = "urxvtopen -e fish"
 
 myConfig = ewmh def
   {
-    terminal = "urxvtopen -e fish"
+    terminal = myTerminal
     , modMask = mod4Mask
     , borderWidth = 3
     , layoutHook = myLayout
     , manageHook = myManageHook <+> manageHook def
     , handleEventHook = fullscreenEventHook <+> handleEventHook def
-  } `additionalKeysP` keyBindings
+  } `additionalKeysP` keyBindings `removeKeysP` removedKeyBindings
 
 toggleStatusBar :: XConfig l -> (KeyMask, KeySym)
 toggleStatusBar XConfig {modMask = modMask} = (modMask, xK_b)
