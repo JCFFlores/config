@@ -21,7 +21,7 @@ instance Transformer TWOPANE Window where
 
 keyBindings = [ ("<XF86AudioMute>", spawn "amixer set Master toggle")
               , ("<XF86AudioLowerVolume>", spawn "amixer set Master 5%-")
-              , ("<XF86AudioRaiseVolume>", spawn "amixer set Master unmute; amixer set Master 5%+")
+              , ("<XF86AudioRaiseVolume>", spawn "amixer set Master 5%+ unmute")
               , ("<Print>", spawn "scrot -e 'mv $f ~/Pictures/ 2>/dev/null'")
               , ("<XF86MonBrightnessUp>", spawn "xbacklight -inc 10")
               , ("<XF86MonBrightnessDown>", spawn "xbacklight -dec 10")
