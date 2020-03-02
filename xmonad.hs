@@ -29,9 +29,11 @@ keyBindings = [ ("<XF86AudioMute>", spawn "amixer set Master toggle")
               , ("M-f", sendMessage $ Toggle FULL)
               , ("M-i", sendMessage $ Toggle TWOPANE)
               , ("M-n", sendMessage NextLayout)
-              , ("M-<Space>", spawn myTerminal)]
+              , ("M-<Space>", spawn myTerminal)
+              , ("M-w", kill)]
 
-removedKeyBindings = ["M-S-<Return>"]
+removedKeyBindings = ["M-S-<Return>"
+                     , "M-S-c"]
 
 myTerminal = "urxvtopen -e fish"
 
