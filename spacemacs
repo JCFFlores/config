@@ -42,7 +42,7 @@ This function should only modify configuration layer settings."
      auto-completion
      (python :variables
              python-test-runner 'pytest
-             python-backend 'anaconda)
+             python-backend 'lsp)
      octave
      ess
      (auto-completion :variables
