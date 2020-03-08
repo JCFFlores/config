@@ -49,7 +49,7 @@ myConfig = ewmh def
   } `additionalKeysP` keyBindings `removeKeysP` removedKeyBindings
 
 toggleStatusBar :: XConfig l -> (KeyMask, KeySym)
-toggleStatusBar XConfig {modMask = modMask} = (modMask, xK_b)
+toggleStatusBar XConfig {modMask = mask} = (mask, xK_b)
 
 myLayout =
   smartBorders . mkToggle (FULL ?? TWOPANE ?? EOT) $
