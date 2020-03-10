@@ -60,7 +60,7 @@ This function should only modify configuration layer settings."
                treemacs-use-follow-mode t)
      (org :variables
           org-enable-org-journal-support t
-          org-journal-dir "~/Dropbox/journal/")
+          org-journal-dir "~/Documents/journal/")
      markdown
      (latex :variables
             latex-enable-folding t)
@@ -507,7 +507,7 @@ before packages are loaded."
   (add-hook 'org-mode-hook 'visual-line-mode)
 
   ;; set location for agenda files
-  (setq org-agenda-files '("~/Dropbox/agenda/"))
+  (setq org-agenda-files '("~/Documents/agenda/"))
 
   ;; keywords used in org todo items
   (setq org-todo-keywords
