@@ -13,6 +13,7 @@ Config
   , Run Kbd [("latam", "es")]
   , Run StdinReader
   , Run Brightness ["-t", "Bright: <percent>%", "--", "-D", "intel_backlight"] 10
+  , Run DynNetwork ["-t", "Down: <rx>KB | Up: <tx>KB"] 10
   ]
-, template = "%StdinReader% }{ %memory% | %default:Master% | %bright% | %battery% | %kbd% | %mydate% |"
+, template = "%StdinReader% }{ %dynnetwork% | %memory% | %default:Master% | %bright% | %battery% | %kbd% | %mydate% |"
 }
