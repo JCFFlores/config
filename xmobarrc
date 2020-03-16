@@ -12,7 +12,7 @@ Config
   , Run Date "%d %b %T" "mydate" 10
   , Run Kbd [("latam", "es")]
   , Run StdinReader
-  , Run Brightness ["-t", "Bright: <percent>%", "--", "-D", "intel_backlight"] 60
+  , Run Brightness ["-t", "Bright: <percent>%", "--", "-D", "intel_backlight"] 10
   ]
 , template = "%StdinReader% }{ %memory% | %default:Master% | %bright% | %battery% | %kbd% | %mydate% |"
 }
