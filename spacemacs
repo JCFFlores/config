@@ -72,7 +72,7 @@ This function should only modify configuration layer settings."
      (spell-checking :variables
                      spell-checking-enable-auto-dictionary t
                      spell-checking-enable-by-default nil)
-     javascript ; Required to read json
+     javascript
      web-beautify
      (html :variables web-fmt-tool 'web-beautify)
      lua ; Used for awesome wm
