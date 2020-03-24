@@ -75,7 +75,6 @@ This function should only modify configuration layer settings."
      javascript
      web-beautify
      (html :variables web-fmt-tool 'web-beautify)
-     lua ; Used for awesome wm
      lsp
      csv
      spotify
