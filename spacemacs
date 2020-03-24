@@ -39,7 +39,6 @@ This function should only modify configuration layer settings."
      helm
      pdf
      semantic
-     auto-completion
      (python :variables
              python-test-runner 'pytest
              python-backend 'lsp)
