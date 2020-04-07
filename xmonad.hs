@@ -31,6 +31,7 @@ keyBindings = [ ("<XF86AudioMute>", spawn "amixer set Master toggle")
               , ("M-i", sendMessage $ Toggle TWOPANE)
               , ("M-n", sendMessage NextLayout)
               , ("M-<Space>", spawn myTerminal)
+              , ("M-r", spawn "urxvtopen -e ranger")
               , ("M-w", kill)]
 
 removedKeyBindings = ["M-S-<Return>"
