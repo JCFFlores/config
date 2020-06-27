@@ -58,6 +58,9 @@ This function should only modify configuration layer settings."
      (org :variables
           org-enable-org-journal-support t
           org-journal-dir (getenv "ORG_JOURNAL"))
+     (c-c++ :variables
+            c-c++-backend 'lsp-ccls
+            c-c++-lsp-enable-semantic-highlight 'rainbow)
      markdown
      (latex :variables
             latex-enable-folding t)
