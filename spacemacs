@@ -42,8 +42,6 @@ This function should only modify configuration layer settings."
      (python :variables
              python-test-runner 'pytest
              python-backend 'lsp)
-     octave
-     ess
      (auto-completion :variables
                       auto-completion-enable-snippets-in-popup t
                       auto-completion-enable-help-tooltip t)
@@ -71,9 +69,6 @@ This function should only modify configuration layer settings."
      (spell-checking :variables
                      spell-checking-enable-auto-dictionary t
                      spell-checking-enable-by-default nil)
-     javascript
-     web-beautify
-     (html :variables web-fmt-tool 'web-beautify)
      lsp
      csv
      spotify
