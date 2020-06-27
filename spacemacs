@@ -59,7 +59,7 @@ This function should only modify configuration layer settings."
                treemacs-use-follow-mode t)
      (org :variables
           org-enable-org-journal-support t
-          org-journal-dir "~/Documents/journal/")
+          org-journal-dir (getenv "ORG_JOURNAL"))
      markdown
      (latex :variables
             latex-enable-folding t)
@@ -494,7 +494,7 @@ before packages are loaded."
     (require 'org-crypt)
     (org-crypt-use-before-save-magic)
     (setq org-tags-exclude-from-inheritance (quote ("crypt"))
-          org-crypt-key "josecruzflores.fl@gmail.com"
+          org-crypt-key (getenv "MAIL")
           auto-save-default nil)
 
     ;; add support for org-crypt in org-journal
@@ -505,7 +505,7 @@ before packages are loaded."
   (add-hook 'org-mode-hook 'visual-line-mode)
 
   ;; set location for agenda files
-  (setq org-agenda-files '("~/Documents/agenda/"))
+  (setq org-agenda-files (list (getenv "ORG_AGENDA")))
 
   ;; keywords used in org todo items
   (setq org-todo-keywords
