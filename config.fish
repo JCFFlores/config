@@ -1,7 +1,9 @@
 function fish_greeting
-    set_color brgreen
-    fortune
-    set_color normal
+    if command -s fortune > /dev/null 2>&1
+        set_color brgreen
+        fortune
+        set_color normal
+    end
 end
 
 set -x MANPATH /usr/share/fish/man /usr/local/man /usr/local/share/man /usr/share/man
