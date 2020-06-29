@@ -523,7 +523,9 @@ before packages are loaded."
 
   (global-linum-mode t)
   ;; Make command meta while sadly working on a shitty mac
-  (setq mac-command-modifier 'meta)
+  (when (eq system-type 'darwin)
+    (setq ns-command-modifier 'meta
+          ns-alternate-modifier nil))
 
   (require 'keyfreq)
   (keyfreq-mode 1)
