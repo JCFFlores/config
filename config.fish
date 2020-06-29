@@ -22,6 +22,10 @@ if test -e $HOME/.variables
     source $HOME/.variables
 end
 
+if test -e $HOME/.abbrevations
+    source $HOME/.abbrevations
+end
+
 # poetry config
 if test -d $HOME/.poetry
     set -x PATH $HOME/.poetry/bin $PATH
