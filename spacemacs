@@ -522,7 +522,8 @@ before packages are loaded."
   (add-hook 'term-mode-hook 'spacemacs/toggle-truncate-lines-on)
 
   (global-linum-mode t)
-  (mac-command-key-is-meta t)
+  ;; Make command meta while sadly working on a shitty mac
+  (setq mac-command-modifier 'meta)
 
   (require 'keyfreq)
   (keyfreq-mode 1)
