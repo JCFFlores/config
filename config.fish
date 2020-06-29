@@ -24,8 +24,8 @@ if test -e $HOME/.variables
     source $HOME/.variables
 end
 
-if test -e $HOME/.abbrevations
-    source $HOME/.abbrevations
+if test -e $HOME/.abbreviations
+    source $HOME/.abbreviations
 end
 
 # poetry config
