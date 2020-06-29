@@ -63,10 +63,6 @@ function fish_title
     true
 end
 
-function cowfortune
-    fortune | cowsay | lolcat
-end
-
 # pyenv configuration
 if command -s pyenv > /dev/null 2>&1
     pyenv init - | source
