@@ -527,9 +527,6 @@ before packages are loaded."
     (setq ns-command-modifier 'meta
           ns-alternate-modifier nil))
 
-  ;; Tramp config
-  (setq tramp-default-method "ssh")
-
   (require 'keyfreq)
   (keyfreq-mode 1)
   (keyfreq-autosave-mode 1)
