@@ -33,11 +33,10 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
+   '(systemd
      yaml
      shell-scripts
      helm
-     pdf
      semantic
      (python :variables
              python-test-runner 'pytest
@@ -61,7 +60,6 @@ This function should only modify configuration layer settings."
      (c-c++ :variables
             c-c++-backend 'lsp-ccls
             c-c++-lsp-enable-semantic-highlight 'rainbow)
-     markdown
      (latex :variables
             latex-enable-folding t)
      (shell :variables
