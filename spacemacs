@@ -518,6 +518,9 @@ before packages are loaded."
   ;; org agenda does not start on a fixed day
   (setq org-agenda-start-on-weekday nil)
 
+  ;; Disable vc
+  (setq vc-handled-backends nil)
+
   (add-hook 'term-mode-hook 'spacemacs/toggle-truncate-lines-on)
 
   (global-linum-mode t)
