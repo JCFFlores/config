@@ -519,7 +519,7 @@ before packages are loaded."
   (setq org-agenda-start-on-weekday nil)
 
   ;; Disable vc
-  (setq vc-handled-backends nil)
+  (setq vc-handled-backends '(Git))
 
   (add-hook 'term-mode-hook 'spacemacs/toggle-truncate-lines-on)
 
