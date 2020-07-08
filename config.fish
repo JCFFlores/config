@@ -33,10 +33,6 @@ if test -d $HOME/.poetry
     set -x PATH $HOME/.poetry/bin $PATH
 end
 
-function top
-    htop
-end
-
 # Emacs ansi-term support
 if test -n "$EMACS"
     set -x TERM eterm-color
@@ -62,3 +58,4 @@ abbr p "sudo pacman"
 abbr SS "sudo systemctl"
 abbr pi "ping google.com"
 abbr y "yay -S"
+abbr h "htop"
