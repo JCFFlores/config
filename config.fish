@@ -33,24 +33,6 @@ if test -d $HOME/.poetry
     set -x PATH $HOME/.poetry/bin $PATH
 end
 
-
-function cd
-    builtin cd $argv
-    ls
-end
-
-function mv
-    command mv -v -i $argv
-end
-
-function cp
-    command cp -v -i $argv
-end
-
-function rm
-    command rm -v $argv
-end
-
 function top
     htop
 end
