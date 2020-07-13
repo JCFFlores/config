@@ -518,8 +518,11 @@ before packages are loaded."
   ;; org agenda does not start on a fixed day
   (setq org-agenda-start-on-weekday nil)
 
-  ;; Disable vc
+  ;; Only enable vc for git
   (setq vc-handled-backends '(Git))
+
+  ;; Follow symlinks
+  (setq vc-follow-symlinks t)
 
   (add-hook 'term-mode-hook 'spacemacs/toggle-truncate-lines-on)
 
