@@ -526,7 +526,7 @@ before packages are loaded."
 
   (add-hook 'term-mode-hook 'spacemacs/toggle-truncate-lines-on)
 
-  (global-linum-mode t)
+  (global-display-line-numbers-mode 1)
   ;; Make command meta while sadly working on a shitty mac
   (when (eq system-type 'darwin)
     (setq ns-command-modifier 'meta
