@@ -36,12 +36,12 @@ function fish_title
 end
 
 # pyenv configuration
-if command -s pyenv > /dev/null 2>&1
+if command -s pyenv >/dev/null 2>&1
     pyenv init - | source
 end
 
 # make fuck callable
-if command -s thefuck > /dev/null 2>&1
+if command -s thefuck >/dev/null 2>&1
     thefuck --alias | source
 end
 
