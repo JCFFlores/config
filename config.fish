@@ -1,11 +1,3 @@
-function fish_greeting
-    if command -s fortune > /dev/null 2>&1
-        set_color brgreen
-        fortune
-        set_color normal
-    end
-end
-
 set -x MANPATH /usr/share/fish/man /usr/local/man /usr/local/share/man /usr/share/man
 
 set -x PIPENV_SHELL_FANCY 1
