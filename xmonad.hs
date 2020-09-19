@@ -21,6 +21,8 @@ instance Transformer TWOPANE Window where
 
 fileBrowser = "hunter"
 
+shell = "fish"
+
 executeOnTerminal command = "urxvtopen -e " ++ command
 
 keyBindings = [ ("<XF86AudioMute>", spawn "amixer set Master toggle")
@@ -41,7 +43,7 @@ keyBindings = [ ("<XF86AudioMute>", spawn "amixer set Master toggle")
 removedKeyBindings = ["M-S-<Return>"
                      , "M-S-c"]
 
-myTerminal = "urxvtopen -e fish"
+myTerminal = executeOnTerminal shell
 
 myConfig = ewmh def
   {
