@@ -19,6 +19,10 @@ data TWOPANE = TWOPANE deriving (Read, Show, Eq, Typeable)
 instance Transformer TWOPANE Window where
   transform _ x k = k (TwoPane (3 / 100) (1/2)) (const x)
 
+fileBrowser = "hunter"
+
+executeOnTerminal command = "urxvtopen -e " ++ command
+
 keyBindings = [ ("<XF86AudioMute>", spawn "amixer set Master toggle")
               , ("<XF86AudioLowerVolume>", spawn "amixer set Master 5%-")
               , ("<XF86AudioRaiseVolume>", spawn "amixer set Master 5%+ unmute")
@@ -31,7 +35,7 @@ keyBindings = [ ("<XF86AudioMute>", spawn "amixer set Master toggle")
               , ("M-i", sendMessage $ Toggle TWOPANE)
               , ("M-n", sendMessage NextLayout)
               , ("M-<Space>", spawn myTerminal)
-              , ("M-r", spawn "urxvtopen -e ranger")
+              , ("M-r", spawn $ executeOnTerminal fileBrowser)
               , ("M-w", kill)]
 
 removedKeyBindings = ["M-S-<Return>"
