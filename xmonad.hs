@@ -19,7 +19,7 @@ data TWOPANE = TWOPANE deriving (Read, Show, Eq, Typeable)
 instance Transformer TWOPANE Window where
   transform _ x k = k (TwoPane (3 / 100) (1/2)) (const x)
 
-fileBrowser = "hunter"
+fileBrowser = "ranger"
 
 shell = "fish"
 
