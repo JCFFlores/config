@@ -23,6 +23,8 @@ fileBrowser = "ranger"
 
 shell = "fish"
 
+myModMask = mod4Mask
+
 executeOnTerminal command = "urxvtopen -e " ++ command
 
 keyBindings = [ ("<XF86AudioMute>", spawn "amixer set Master toggle")
@@ -44,17 +46,19 @@ keyBindings = [ ("<XF86AudioMute>", spawn "amixer set Master toggle")
 removedKeyBindings = ["M-S-<Return>"
                      , "M-S-c"]
 
+removedMouseBindings = [ (myModMask, button1) ]
+
 myTerminal = executeOnTerminal shell
 
 myConfig = ewmh def
   {
     terminal = myTerminal
-    , modMask = mod4Mask
+    , modMask = myModMask
     , borderWidth = 3
     , layoutHook = myLayout
     , manageHook = myManageHook <+> manageHook def
     , handleEventHook = fullscreenEventHook <+> handleEventHook def
-  } `additionalKeysP` keyBindings `removeKeysP` removedKeyBindings
+  } `additionalKeysP` keyBindings `removeKeysP` removedKeyBindings `removeMouseBindings` removedMouseBindings
 
 toggleStatusBar :: XConfig l -> (KeyMask, KeySym)
 toggleStatusBar XConfig {modMask = mask} = (mask, xK_b)
