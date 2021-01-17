@@ -1,3 +1,4 @@
+-- -*- mode: haskell -*-
 Config
 { bgColor =      "black"
 , fgColor =      "#A4A4A4"
