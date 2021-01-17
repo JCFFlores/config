@@ -14,6 +14,10 @@ Config
   , Run StdinReader
   , Run Brightness ["-t", "Bright: <percent>%", "--", "-D", "intel_backlight"] 10
   , Run DynNetwork ["-t", "Down: <rx>KB | Up: <tx>KB"] 10
+  , Run MultiCoreTemp ["-t", "Temp: <avg>°C | <avgpc>%",
+                      "-L", "60", "-H", "80",
+                      "-l", "green", "-n", "yellow", "-h", "red",
+                      "--", "--mintemp", "20", "--maxtemp", "100"] 50
   ]
-, template = "%StdinReader% }{ %dynnetwork% | %memory% | %default:Master% | %bright% | %battery% | %kbd% | %mydate% |"
+, template = "%StdinReader% }{ %dynnetwork% | %memory% | %multicoretemp% | %default:Master% | %bright% | %battery% | %kbd% | %mydate% |"
 }
