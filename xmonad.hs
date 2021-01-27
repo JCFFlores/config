@@ -21,6 +21,8 @@ instance Transformer TWOPANE Window where
 
 fileBrowser = "ranger"
 
+activityMonitor = "gotop"
+
 shell = "fish"
 
 myModMask = mod4Mask
@@ -41,6 +43,7 @@ keyBindings = [ ("<XF86AudioMute>", spawn "amixer set Master toggle")
               , ("M-n", sendMessage NextLayout)
               , ("M-<Space>", spawn myTerminal)
               , ("M-r", spawn $ executeOnTerminal fileBrowser)
+              , ("M-g", spawn $ executeOnTerminal activityMonitor)
               , ("M-w", kill)]
 
 removedKeyBindings = ["M-S-<Return>"
