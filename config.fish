@@ -9,7 +9,7 @@ set -g theme_nerd_fonts yes
 # pyenv config
 if test -d $HOME/.pyenv
     set -Ux PYENV_ROOT $HOME/.pyenv
-    set -x $fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+    set -x fish_user_paths $PYENV_ROOT/bin $fish_user_paths
 end
 
 if test -e $HOME/.variables
