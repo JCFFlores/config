@@ -50,5 +50,5 @@ end
 abbr p "sudo pacman"
 abbr SS "sudo systemctl"
 abbr pi "ping google.com"
-abbr y "yay -S"
+abbr pa "paru -S"
 abbr h "htop"
