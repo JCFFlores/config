@@ -8,8 +8,8 @@ set -g theme_nerd_fonts yes
 
 # pyenv config
 if test -d $HOME/.pyenv
-    set -x PYENV_ROOT $HOME/.pyenv
-    set -x PATH $PYENV_ROOT/bin $PATH
+    set -Ux PYENV_ROOT $HOME/.pyenv
+    set -x $fish_user_paths $PYENV_ROOT/bin $fish_user_paths
 end
 
 if test -e $HOME/.variables
@@ -37,6 +37,7 @@ end
 
 # pyenv configuration
 if command -s pyenv >/dev/null 2>&1
+    status is-login; and pyenv init --path | source
     pyenv init - | source
 end
 
